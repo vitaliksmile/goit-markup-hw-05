@@ -210,6 +210,8 @@ li {
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   z-index: 1;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
