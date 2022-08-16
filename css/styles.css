@@ -206,12 +206,17 @@ li {
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transform: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
 }
 
 .modal {
@@ -571,6 +576,7 @@ li {
   line-height: 1.62;
   padding: 6px 25px;
   border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-button:hover,
@@ -591,6 +597,7 @@ li {
   width: 370 px;
   margin-right: 30px;
   margin-bottom: 30px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects.list .item-projects:hover {
@@ -625,4 +632,37 @@ li {
   font-size: 16px;
   line-height: 1.8;
   margin-top: 4px;
+}
+
+.project-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-thumb {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 149, 243, 0.9);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(100%);
+}
+.overlay-link {
+  outline: transparent;
+}
+
+.title-overlay {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--primary--white-color);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 63px 24px;
+}
+
+.item-projects a:hover .overlay-thumb,
+.item-projects a:focus .overlay-thumb {
+  transform: translateY(0%);
 }
