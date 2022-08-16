@@ -118,6 +118,8 @@ li {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link:hover,
@@ -157,6 +159,8 @@ li {
   letter-spacing: 0.02em;
   padding: 32px 0;
   color: var(--primary-text-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .auth-nav .link:hover,
@@ -421,6 +425,8 @@ li {
   font-size: 14px;
   line-height: 1.71;
   font-style: normal;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list .contacts {
@@ -428,6 +434,8 @@ li {
   font-size: 14px;
   line-height: 1.71;
   font-style: normal;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bgc-teem {
@@ -450,6 +458,8 @@ li {
   width: 44px;
   height: 44px;
   outline: none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sosial-link:hover,
@@ -485,17 +495,27 @@ li {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   outline: none;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.svg {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 .customer-link:hover,
-.customer-link:focus {
-  border-color: var(--accent-color);
-}
-
+.customer-link:focus,
 .customer-link:hover .svg,
 .customer-link:focus .svg {
+  border-color: var(--accent-color);
   fill: var(--accent-color);
 }
+
+/* .customer-link:hover .svg,
+.customer-link:focus .svg {
+  fill: var(--accent-color);
+} */
 
 /* footer */
 .section-flex {
@@ -535,6 +555,8 @@ li {
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
   outline: none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sosial-footer-link:hover,
